@@ -28,5 +28,5 @@ npm install
 
 ### Iniciar el proyecto:
 ```
-npm start
+npm run dev
 ```
