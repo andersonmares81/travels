@@ -13,12 +13,12 @@ npm v7 o superior
 
 ### Clonar el repositorio:
 ```
-git clone https://github.com/usuario/repositorio.git
+https://github.com/andersonmares81/travels.git
 ```
 
 ### Acceder al directorio del proyecto:
 ```
-cd repositorio
+cd travels
 ```
 
 ### Instalar las dependencias:
