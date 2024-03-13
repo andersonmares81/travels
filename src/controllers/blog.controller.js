@@ -1,10 +1,10 @@
 
 import { getConnection } from "../database/database.js";
 
-const getDestinations = async( req, res ) => {
+const getBlogs = async( req, res ) => {
     try{
         const connection = await getConnection();
-        const result = await connection.query("SELECT `city`, `country`, `images`, `descriptions`, `rates`, `discounts`, `qualification`, `datepublish` FROM destinations;");
+        const result = await connection.query("SELECT * FROM blogs;");
         console.log(result);
         res.json(result);
     }catch (error) {
@@ -14,5 +14,5 @@ const getDestinations = async( req, res ) => {
 };
 
 export const methods = {
-    getDestinations
+    getBlogs
 };
