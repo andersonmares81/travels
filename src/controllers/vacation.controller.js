@@ -1,9 +1,9 @@
 import { getConnection } from "../database/database.js";
 
-const getDestinations = async (req, res) => {
+const getVacations = async (req, res) => {
     try {
         const connection = await getConnection();
-        const result = await connection.query("SELECT `id`, `images`, `city`, `country`, `qualification`, `rates`, `discounts`, `qualification`, `datepublish`  FROM destinations LIMIT 20;"); 
+        const result = await connection.query("SELECT `id`, `images`, `city`, `country`, `qualification`, `rates`, `duration`, `qualification` FROM destinations WHERE destinationscol=0 LIMIT 20;"); 
         res.setHeader('Cache-Control', 'public, max-age=7200');
         res.json(result[0]);
     } catch (error) {
@@ -13,5 +13,5 @@ const getDestinations = async (req, res) => {
 };
 
 export const methods = {
-    getDestinations
+    getVacations
 };
